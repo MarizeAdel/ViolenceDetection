@@ -1,0 +1,75 @@
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+  background-image: url('bac.jpg');
+  padding: 0px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height:100%;
+  margin: 0px;
+  color: #ffffff;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.content{
+  justify-content: center;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+height: 10%;
+padding: 145px;
+padding-top: 140px;
+padding-bottom: 5px;
+margin: 0px;
+font-size: 60px;
+}
+#dis{
+  margin: 0px;
+}
+h4{
+  font-size: 20px;
+}
+#submit{
+  
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 0.5em;
+  border-radius: 4px;
+  background-color:#fe665b ;
+  border: 0px;
+  box-shadow: none;
+}
+input{
+  
+  display: inline;
+
+}
+
+input::file-selector-button {
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 0.5em;
+  border: 0px;
+  border-radius: 4px;
+  background-color:#fe665b ;
+}
+input[type='file']{
+  color: transparent;
+}
+#video{
+  display: inline;
+  width: auto;
+  height: 220px;
+}
+video{
+  display: inline;
+  width: 220px;
+  height: 220px;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violence Detection</title>
+  <link rel="stylesheet" type="text/css" href="{{'./images/my.css'}}"> 
+  <link rel="stylesheet" type="text/css" href="../images/my.css">
+</head>
+<body >
+  <div class="content">
+    <h1 >Violence Detection</h1>
+    <p id="dis"> This application is made for detecting whether  the <br> content of video  contains violence <br> sence or not</p>
+<h4 >Upload the video </h4>
+
+
+<form method="post" action="/" enctype="multipart/form-data">
+     <p >
+		<input type="file" name="file" autocomplete="off"  required>
+	  <input id="submit" type="submit" name="submit" value="Submit">
+    </p>
+</form>
+<p id="video">
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+        the following video is:
+        <u>
+          <h3 id="vio">{{ messages[0] }}</h3>
+        </u>
+        <video  autoplay>
+          <source src="{{messages[1]}}" type="video/mp4">
+        </video>
+        {% if messages[0] == "violence": %}
+        <audio id="myAudio">
+          <source src="../images/static/alarm-1-with-reverberation-30031.mp3" type="audio/mpeg">  
+          </audio>
+          <button onclick="playAudio()" type="button" style="display: none;" >Play Audio</button>
+          <script>
+          var x = document.getElementById("myAudio");
+          document.getElementById("vio").style.color= "#ff0000";
+          function playAudio() { 
+            x.play();}
+          setTimeout(() => {
+            playAudio();
+          },1000);
+          </script>
+          {% else %}
+        {% endif %}
+	  {% endif %}
+	{% endwith %}
+</p>
+</div>
+</body>
+</html>
+
